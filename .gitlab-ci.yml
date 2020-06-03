@@ -5,6 +5,7 @@ stages:
 build-docker:
   stage: build
   before_script: 
+    - sudo docker rm -f flappymadafucky || true
     - sudo docker rmi -f muchdevops || true
   script:
     - sudo docker build -t muchdevops . 
