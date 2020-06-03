@@ -5,15 +5,15 @@ stages:
 build-docker:
   stage: build
   before_script: 
-    - docker rmi -f muchdevops || true
+    - sudo docker rmi -f muchdevops || true
   script:
-    - docker build -t muchdevops . 
+    - sudo docker build -t muchdevops . 
   tags:
     - build
 deploy-docker:
   stage: deploy
   script:
-    - docker run -d --name flappymadafucky -p 80:80
+    - sudo docker run -d --name flappymadafucky -p 80:80
   tags:
     - deploy
   only:
