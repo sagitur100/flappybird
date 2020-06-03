@@ -14,7 +14,7 @@ build-docker:
 deploy-docker:
   stage: deploy
   script:
-    - sudo docker run -d --name flappymadafucky -p 80:80
+    - sudo docker run -d --name flappymadafucky -p 80:80 muchdevops
   tags:
     - deploy
   only:
